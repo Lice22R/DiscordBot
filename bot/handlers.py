@@ -3,6 +3,7 @@ from . settings import *
 
 @client.event   
 async def on_ready():
+    logger.info('BOT Launched')
     print('BOT connected') 
 
 @client.command(pass_context=True)
