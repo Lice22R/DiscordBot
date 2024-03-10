@@ -7,11 +7,13 @@ import logging
 APPLICATION_ID = '1216025052764704799'
 PUBLIC_KEY = 'd47b0580994bcade173be2ef41cb47bc4eeac1fa79a04973a26dbe4c082b6b24'
 CLIENT_SECRET = 'jtUGFwSWApMTrsf9C4lDsvbIy93lLRdg'
-TOKEN = 'MTIwOTU1MDg5MjQxNjYzOTA0Ng.GJTILW.YlUmckiCAm3LAW0J_6hZ3ZtbmhOy4ggyyjVRcw'
+TOKEN = 'MTIwOTU1MDg5MjQxNjYzOTA0Ng.GBaqSe.7baYmYmG5fqtsD6y8CC6gP1h1qjB00kUkjWEvY'
 
 
 # Настройки бота
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
+client.intents.members = True  # Включаем интент для отслеживания событий о новых участниках
+
 
 PLACEHOLDER = 'В какие игры вы играете?'
 CHOOSEN_GAMES = [
@@ -85,7 +87,8 @@ ROLE_ASSOCIATIONS = {
 }
 
 #Роль выдающаяся всем при входе
-STARTING_ROLE = '1216498611068604498'
+#Разобраться потом чтобы выдавалась роль через эту переменную, пока не работает
+#STARTING_ROLE = '1216498611068604498'
 
 # Настройки логера
 logger = logging.getLogger(__name__)
