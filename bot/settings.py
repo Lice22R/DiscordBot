@@ -7,11 +7,13 @@ import logging
 APPLICATION_ID = '1216025052764704799'
 PUBLIC_KEY = 'd47b0580994bcade173be2ef41cb47bc4eeac1fa79a04973a26dbe4c082b6b24'
 CLIENT_SECRET = 'jtUGFwSWApMTrsf9C4lDsvbIy93lLRdg'
-TOKEN = 'MTIwOTU1MDg5MjQxNjYzOTA0Ng.GJTILW.YlUmckiCAm3LAW0J_6hZ3ZtbmhOy4ggyyjVRcw'
+TOKEN = 'MTIwOTU1MDg5MjQxNjYzOTA0Ng.GBaqSe.7baYmYmG5fqtsD6y8CC6gP1h1qjB00kUkjWEvY'
 
 
 # Настройки бота
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
+client.intents.members = True  # Включаем интент для отслеживания событий о новых участниках
+
 
 PLACEHOLDER = 'В какие игры вы играете?'
 CHOOSEN_GAMES = [
@@ -71,12 +73,22 @@ CHOOSEN_GAMES = [
     },
 ]
 
+#Список всех ролей по их id
 ROLE_ASSOCIATIONS = {
-    # TODO: Создать в легуге роли в колличестве len(CHOOSEN_GAME) штук.
-    # TODO: Заполнить данный словарь в формате 'value': 'role_id' (id роли копируем из discord)
-    'value': 'role_id'
+    'dayz': '1216493809978970184',
+    'valorant': '1216494174010998904',
+    'warthunder': '1216494790779338854',
+    'dota2': '1216493979269595148',
+    'apex': '1216494246727651389',
+    'overwhatch': '1216518517667663902',
+    'escapefromtarkov': '1216494071489499206',
+    'cs': '1216494478358085652',
+    'rocketleague': '1216494700521853038',
 }
 
+#Роль выдающаяся всем при входе
+#Разобраться потом чтобы выдавалась роль через эту переменную, пока не работает
+#STARTING_ROLE = '1216498611068604498'
 
 # Настройки логера
 logger = logging.getLogger(__name__)
