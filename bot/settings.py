@@ -13,7 +13,7 @@ TOKEN = 'MTIwOTU1MDg5MjQxNjYzOTA0Ng.GJTILW.YlUmckiCAm3LAW0J_6hZ3ZtbmhOy4ggyyjVRc
 # Настройки бота
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
 
-PLACEHOLDER = 'Яки игрi ты бачишь?'
+PLACEHOLDER = 'В какие игры вы играете?'
 CHOOSEN_GAMES = [
     {
         'label': 'DayZ',
