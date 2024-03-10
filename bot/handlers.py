@@ -42,7 +42,7 @@ async def on_member_join(member):
 
             print(f"Role {starting_role.name} added to {member.display_name}")
         else:
-            print(f"Role with ID {STARTING_ROLE} not found.")
+            print(f"Role with ID {1216498611068604498} not found.")
     except Exception as e:
         print(f"An error occurred: {e}")
 
