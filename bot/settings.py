@@ -14,7 +14,10 @@ TOKEN = 'MTIwOTU1MDg5MjQxNjYzOTA0Ng.GBaqSe.7baYmYmG5fqtsD6y8CC6gP1h1qjB00kUkjWEv
 client = commands.Bot(command_prefix='.', intents=discord.Intents.all())
 client.intents.members = True
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e5446a29092e94092df88deff867661f5b844615
 PLACEHOLDER = 'В какие игры вы играете?'
 CHOOSEN_GAMES = [
     {
