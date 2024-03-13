@@ -1,13 +1,21 @@
 import discord
 from discord.ext import commands
+
 import logging
+
+from dotenv import load_dotenv
+import os
+
+
+# Подгружаем переменные окружения из файла .env
+load_dotenv()
 
 
 # Основные токены
-APPLICATION_ID = '1216025052764704799'
-PUBLIC_KEY = 'd47b0580994bcade173be2ef41cb47bc4eeac1fa79a04973a26dbe4c082b6b24'
-CLIENT_SECRET = 'jtUGFwSWApMTrsf9C4lDsvbIy93lLRdg'
-TOKEN = 'MTIwOTU1MDg5MjQxNjYzOTA0Ng.GBaqSe.7baYmYmG5fqtsD6y8CC6gP1h1qjB00kUkjWEvY'
+APPLICATION_ID = os.getenv('APPLICATION_ID')
+PUBLIC_KEY = os.getenv('PUBLIC_KEY')
+CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+TOKEN = os.getenv('TOKEN')
 
 
 # Настройки бота
