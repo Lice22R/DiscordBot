@@ -22,7 +22,16 @@ class MyView(discord.ui.View):
         ]
     )
     async def select_callback(self, select, interaction):
-        await interaction.response.send_message(f"Awesome! I like {select.values[0]} too!", ephemeral=True)
+        try:
+            member = interaction.user
+            for selected_value in select.values:
+                role_id = ROLE_ASSOCIATIONS.get(selected_value)
+                role = interaction.guild.get_role(int(role_id))
+                if role is not None:
+                    await member.add_roles(role)
+                    await interaction.response.send_message(f"Роли успешно выданы!", ephemeral=True)
+        except Exception as e:
+            logger.error(e)
 
 
 @client.event
